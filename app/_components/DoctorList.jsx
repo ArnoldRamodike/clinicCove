@@ -1,6 +1,7 @@
 
 
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const DoctorList = ({doctorList, header= 'Popular Doctors'}) => {
@@ -16,9 +17,11 @@ const DoctorList = ({doctorList, header= 'Popular Doctors'}) => {
                     <h2 className='font-bold'>{doctor.attributes?.Name}</h2>
                     <h2 className='text-primary text-sm'>{doctor.attributes?.Years_of_Experience} Years Experience</h2>
                     <h2 className='text-gray-500 text-sm'>{doctor.attributes?.Address}</h2>
-
-                    <h2 className='p-2 px-3 mt-2 border-[1px] border-primary text-primary rounded-full w-full text-center text-[11px] 
-                    cursor-pointer hover:bg-primary hover:text-white'>Book now</h2>
+                    <Link Link href={'/details/'+doctor?.id}  className='w-full'>
+                        <h2 className='p-2 px-3 mt-2 border-[1px] border-primary text-primary rounded-full w-full text-center text-[11px] 
+                            cursor-pointer hover:bg-primary hover:text-white'>Book now</h2>
+                    </Link>
+                    
                 </div>
             </div>
         )) :
