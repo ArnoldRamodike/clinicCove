@@ -20,4 +20,10 @@ const getDoctorById = (id) => axiosClient.get('/doctors/'+id+'?populate=*');
 
 const bookAppointment= (data) => axiosClient.post('/appointments', data);
 
-export default {getCategory, getDoctorList, getDoctorByCategory, getDoctorById, bookAppointment};
+const sendEmail = (data) => axios.post('/api/sendEmail', data);
+
+const getUserBookingList = (userEmail) => axiosClient.get('/appointments?[filters][Email][Name][$eq]='+userEmail+"&populate[doctor][populate][image][populate][0]=url&populate=*");
+
+const deleteBooking = (id) => axiosClient.delete('/appointments/'+id);
+
+export default {getCategory, getDoctorList, getDoctorByCategory, getDoctorById, bookAppointment, sendEmail, getUserBookingList, deleteBooking};
