@@ -46,17 +46,14 @@ const Header = () => {
                     </PopoverTrigger>
                     <PopoverContent>
                         <ul className='flex flex-col gap-2'>
-                            <li className='cursor-pointer hover:bg-slate-100 p-2 rounded-md'>Profile</li>
-                            <li className='cursor-pointer hover:bg-slate-100 p-2 rounded-md'>My bookings</li>
+                            <Link href={'/profile'} className='cursor-pointer hover:bg-slate-100 p-2 rounded-md'>Profile</Link>
+                            <Link href={'/my-booking'} className='cursor-pointer hover:bg-slate-100 p-2 rounded-md'>My bookings</Link>
                             <li className='cursor-pointer hover:bg-slate-100 p-2 rounded-md'>
                             <LogoutLink>Log out</LogoutLink>
                             </li>
                         </ul>
                     </PopoverContent>
                    </Popover>
-      
-    
-
              ) :( 
              <LoginLink><Button>Get started</Button></LoginLink>
             )
