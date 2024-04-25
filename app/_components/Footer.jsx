@@ -5,7 +5,7 @@ const Footer = () => {
   return (
 <footer className="bg-gray-100">
   <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 justify-center text-center flex flex-col items-center">
-    <Image src='/logo.svg' alt='Logo' width={200} height={100}/>
+    <Image src={'/logo.svg'} alt='Logo' width={200} height={100}/>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
